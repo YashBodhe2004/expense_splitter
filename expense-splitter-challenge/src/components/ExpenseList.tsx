@@ -15,7 +15,7 @@ function ExpenseList({ expenses, setExpenses }: ExpenseListProps) {
       <h2 className="text-2xl mb-4">📝 Expense History</h2>
 
       {expenses.map(expense => (
-        <div key={expense.id} className="flex justify-between mb-2">
+        <div key={expense.id} className="flex flex-col sm:flex-row justify-between mb-2">
           <div>
             <strong>{expense.description}</strong>
             <div className="text-sm">

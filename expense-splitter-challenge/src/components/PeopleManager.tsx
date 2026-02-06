@@ -40,14 +40,14 @@ function PeopleManager({ people, setPeople, expenses }: PeopleManagerProps) {
     <div className="bg-white rounded-xl p-6 mb-6 shadow-lg">
       <h2 className="text-2xl mb-4">👥 Manage People</h2>
 
-      <form onSubmit={handleAddPerson} className="flex gap-2 mb-4">
+      <form onSubmit={handleAddPerson} className="flex flex-col sm:flex-row gap-2 mb-4">
         <input
           value={name}
           onChange={e => setName(e.target.value)}
           placeholder="Enter person's name"
           className="flex-1 px-3 py-2 border rounded"
         />
-        <button className="bg-indigo-500 text-white px-4 py-2 rounded">
+        <button className="bg-indigo-500 text-white px-4 py-2 rounded w-full sm:w-auto">
           Add Person
         </button>
       </form>

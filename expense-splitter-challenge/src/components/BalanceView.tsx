@@ -63,8 +63,8 @@ function BalanceView({ people, expenses }: BalanceViewProps) {
       </h2>
 
       {/* Total Group Spending */}
-      <div className="flex justify-between items-center p-4 rounded-lg mb-6 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
-        <span>Total Group Spending:</span>
+      <div className="flex flex-col sm:flex-row justify-between items-center p-4 rounded-lg mb-6 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+        <span className="mb-2 sm:mb-0">Total Group Spending:</span>
         <strong className="text-xl">₹{totalSpending.toFixed(2)}</strong>
       </div>
 
@@ -81,7 +81,7 @@ function BalanceView({ people, expenses }: BalanceViewProps) {
         return (
           <div
             key={person}
-            className={`flex justify-between items-center px-4 py-3 mb-2 rounded-md border
+            className={`flex flex-col sm:flex-row justify-between items-center px-4 py-3 mb-2 rounded-md border
               ${isOwed ? 'bg-green-50 border-green-200' : ''}
               ${owes ? 'bg-red-50 border-red-200' : ''}
               ${value === 0 ? 'bg-gray-50 border-gray-200' : ''}
@@ -120,7 +120,7 @@ function BalanceView({ people, expenses }: BalanceViewProps) {
           settlements.map((s, index) => (
             <div
               key={index}
-              className="flex justify-between items-center px-4 py-2 mb-2 bg-gray-50 rounded border"
+              className="flex flex-col sm:flex-row justify-between items-center px-4 py-2 mb-2 bg-gray-50 rounded border"
             >
               <span className="text-sm">
                 <strong className="text-red-600">{s.from}</strong>
